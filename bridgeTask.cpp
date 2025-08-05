@@ -23,7 +23,7 @@ double calculateUnderwaterDistance(double width_m, double x_m)
     return sqrt((width_m * width_m) + (x_m * x_m));
 }
 
-// 🧸 Step 3: Calculate cost for a specific x (where x is how far along the river we go underwater)
+
 double calculateTotalCost(double x, double width_m, double distance_m, double underwaterCost, double landCost)
 {
     double underwaterLength = calculateUnderwaterDistance(width_m, x);
@@ -31,7 +31,7 @@ double calculateTotalCost(double x, double width_m, double distance_m, double un
     return (underwaterLength * underwaterCost) + (landLength * landCost);
 }
 
-// 🧸 Step 4: Try every possible landing spot along the river
+
 void findCheapestCablePath(double width, double distance, double underwaterCost, double landCost) 
 {
     double width_m = width * 1000;       // convert to meters
@@ -59,7 +59,7 @@ void findCheapestCablePath(double width, double distance, double underwaterCost,
     cout << "• Total cost: $" << minCost << endl;
 }
 
-// 🧸 Step 5: Run it all in main!
+
 int main()
 {
     double width, distance, underwaterCost, landCost;
